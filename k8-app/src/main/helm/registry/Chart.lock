@@ -1,0 +1,9 @@
+dependencies:
+- name: docker-registry
+  repository: https://charts.helm.sh/stable
+  version: 1.9.4
+- name: chartmuseum
+  repository: https://charts.helm.sh/stable
+  version: 2.13.0
+digest: sha256:0ee2e0ea8f12a75aef14e9fa0111c9cc83c73780d34aa6d33b04352ba5fc6d81
+generated: "2022-01-18T10:52:44.6458887Z"

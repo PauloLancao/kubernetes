@@ -1,0 +1,19 @@
+chartmuseum:
+  enabled: true
+  service:
+    type: NodePort
+    nodePort: 32702
+  env:
+    open:
+      ALLOW_OVERWRITE: true
+      STORAGE: local
+      DISABLE_API: false
+  persistence:
+    enabled: true
+    accessMode: ReadWriteOnce
+    size: 8Gi
+docker-registry:
+  enabled: true
+  service:
+    type: NodePort
+    nodePort: 32701

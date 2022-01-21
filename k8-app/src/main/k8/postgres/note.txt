@@ -1,0 +1,1 @@
+Found tricky to login to the database consistently which made me took a different path of choosing another PostgreSQL image.
