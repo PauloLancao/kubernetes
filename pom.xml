@@ -24,6 +24,8 @@
         <postgresql.version>42.3.1</postgresql.version>
         <hibernate.core.version>5.6.4.Final</hibernate.core.version>
         <spring.restdocs.version>2.0.6.RELEASE</spring.restdocs.version>
+        <liquibase.core.version>4.7.0</liquibase.core.version>
+        <lombok.version>1.18.22</lombok.version>
         
         <!-- Swagger OpenAPI -->
         <springdoc.version>1.6.4</springdoc.version>
@@ -92,10 +94,12 @@
 			<dependency>
 				<groupId>org.liquibase</groupId>
 				<artifactId>liquibase-core</artifactId>
+				<version>${liquibase.core.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>org.projectlombok</groupId>
 				<artifactId>lombok</artifactId>
+				<version>${lombok.version}</version>
 				<optional>true</optional>
 			</dependency>
 			
