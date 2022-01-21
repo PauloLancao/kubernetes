@@ -1,4 +1,4 @@
-# Callisto Spring Boot & PostgreSQL on Kubernetes
+# Spring Boot & PostgreSQL on Kubernetes
 
 Running spring-boot rest application using swagger UI. 
 Deployment of PostgreSQL and spring-boot application.
@@ -36,7 +36,7 @@ kubectl config get-contexts
 kubectl config use-context docker-desktop
 ```
 
-##### Create namespace for Callisto
+##### Create namespace
 ```
 kubectl get namespace
 kubectl create namespace callisto

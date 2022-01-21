@@ -1,4 +1,4 @@
-# Callisto Spring Boot & Liquibase & PostgreSQL on Kubernetes
+# Spring Boot & Liquibase & PostgreSQL on Kubernetes
 
 Running spring-boot application with Liquibase schema manager.
 
