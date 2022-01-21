@@ -1,0 +1,7 @@
+databaseChangeLog:
+  - include:
+      file: db/changelog/create-foo-schema.xml
+  - include:
+      file: db/changelog/insert-foo-data.xml
+  - include:
+      file: db/changelog/add-foo-column.xml
