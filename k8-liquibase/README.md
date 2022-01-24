@@ -2,30 +2,23 @@
 
 Running spring-boot application with Liquibase schema manager.
 
-## Build and deploy image to registry
+## Run local PostgreSQL on docker
+##### Go to k8-infrastructure and run
 ```
-./build.sh <version>
-```
-
-## Running local PostgreSQL on docker for testing
-```
-docker run --name foo-psql \
-    -p 5450:5432 \
-    -e POSTGRES_DB=postgres \
-    -e POSTGRES_PASSWORD=postgres \
-    -d postgres
+./docker-postgres.sh <image_name> <port> <db_name> <db_pwd>
 ```
 
-## Maven Build and Push Image
-##### Steps to run locally
+##### Run application local
+* PostgreSQL should be running on docker
+
 ```
 mvn clean install
 mvn spring-boot:run
 ```
 
-##### Push Image
+## Build and deploy image to registry
 ```
-mvn clean deploy
+./build.sh <version>
 ```
 
 ##### Check Image repository
@@ -36,7 +29,7 @@ curl http://localhost:32701/v2/timecard-liquibase/tags/list
 
 ##### Install chart
 ```
-helm install liquibase-service http://localhost:32702/charts/liquibase-1.0.0.tgz -n callisto
+helm install <pod_name> http://localhost:32702/charts/liquibase-<version>.tgz -n <namespace>
 or to upgrade
-helm upgrade liquibase-service http://localhost:32702/charts/liquibase-1.0.0.tgz -n callisto
+helm upgrade <pod_name> http://localhost:32702/charts/liquibase-<version>.tgz -n <namespace>
 ```
