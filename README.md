@@ -52,6 +52,8 @@ helm install psql-callisto cetic/postgresql -n callisto
 
 ##### Useful commands
 ```
+helm repo list
+helm repo remove <namespace>
 helm list -n <namespace>
 helm get manifest <release_name> -n <namespace>
 helm history <release_name> -n <namespace>
