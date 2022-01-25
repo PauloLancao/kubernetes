@@ -5,9 +5,8 @@
 replicaCount: 1
 
 image:
-  repository: 127.0.0.1:32701/timecard
-  liquibaseRepository: 127.0.0.1:32701/liquibase-init:1.0.18
-  pullPolicy: Always
+  repository: 127.0.0.1:32701/liquibase-init
+  pullPolicy: Never
   # Overrides the image tag whose default is the chart appVersion.
   # tag: "1.0-SNAPSHOT"
 
@@ -40,15 +39,7 @@ securityContext: {}
 service:
   type: NodePort
   port: 8080
-  nodePort: 30001
-  debugPort: 8000
-  debugNodePort: 30002
-
-livenessProbe:
-  enabled: true
-
-readinessProbe:
-  enabled: true
+  nodePort: 30004
 
 ingress:
   enabled: false

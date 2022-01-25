@@ -5,10 +5,10 @@
 
 	<groupId>com.callisto</groupId>
 	<artifactId>liquibase-init</artifactId>
-	<version>1.0.17</version>
+	<version>1.0.18</version>
 	<packaging>jar</packaging>
 
-	<name>TimeCard</name>
+	<name>Liquibase-Init</name>
 	<description>Liquibase Init Container</description>
 
 	<parent>

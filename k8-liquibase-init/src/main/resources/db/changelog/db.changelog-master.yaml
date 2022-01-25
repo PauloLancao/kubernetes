@@ -7,3 +7,5 @@ databaseChangeLog:
       file: add-metadata-column.xml
   - include:
       file: add-name-column.xml
+  - include:
+      file: add-payload-column.xml

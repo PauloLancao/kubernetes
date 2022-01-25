@@ -10,4 +10,4 @@ spec:
     image: 127.0.0.1:32701/timecard:1.0.24
   initContainers:
   - name: liquibase-init
-    image: 127.0.0.1:32701/liquibase-init:1.0.17
+    image: 127.0.0.1:32701/liquibase-init:1.0.18
