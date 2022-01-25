@@ -5,7 +5,7 @@
 
 	<groupId>com.callisto</groupId>
 	<artifactId>timecard-liquibase</artifactId>
-	<version>1.0.15</version>
+	<version>1.0.21</version>
 	<packaging>jar</packaging>
 
 	<name>TimeCard-Liquibase</name>

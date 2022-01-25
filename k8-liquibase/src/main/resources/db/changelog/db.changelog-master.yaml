@@ -5,3 +5,5 @@ databaseChangeLog:
       file: db/changelog/insert-foo-data.xml
   - include:
       file: db/changelog/add-foo-column.xml
+  - include:
+      file: db/changelog/add-name-column.xml

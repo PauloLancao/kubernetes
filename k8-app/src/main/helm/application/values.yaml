@@ -6,6 +6,7 @@ replicaCount: 1
 
 image:
   repository: 127.0.0.1:32701/timecard
+  liquibaseRepository: 127.0.0.1:32701/liquibase-init:1.0.17
   pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
   # tag: "1.0-SNAPSHOT"

@@ -27,6 +27,9 @@ spec:
       serviceAccountName: {{ include "callisto.serviceAccountName" . }}
       securityContext:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
+      initContainers:
+        - name: liquibase-init
+          image: "{{ .Values.image.liquibaseRepository }}"
       containers:
         - name: {{ .Chart.Name }}
           securityContext:

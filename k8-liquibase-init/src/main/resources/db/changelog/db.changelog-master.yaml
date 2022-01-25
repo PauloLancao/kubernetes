@@ -1,0 +1,9 @@
+databaseChangeLog:
+  - include:
+      file: create-schema.xml
+  - include:
+      file: insert-data.xml
+  - include:
+      file: add-metadata-column.xml
+  - include:
+      file: add-name-column.xml

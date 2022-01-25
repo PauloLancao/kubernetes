@@ -10,6 +10,7 @@
 * minikube
 * helm
 * maven
+* kubectl
 
 ### MiniKube
 ##### minikube installation
