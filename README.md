@@ -2,7 +2,8 @@
 
 ### Prototype Project
 * Spring boot application
-* Liquibase application
+* Liquibase standalone spring application
+* Liquibase K8 Init container
 * Infrastructure local and minikube
 
 ### Setup
@@ -11,6 +12,8 @@
 * helm
 * maven
 * kubectl
+* docker registry (running on docker)
+* chart museum (running on docker)
 
 ### MiniKube
 ##### minikube installation
