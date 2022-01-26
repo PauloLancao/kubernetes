@@ -51,7 +51,7 @@ helm repo add <namespace> http://localhost:32702
 
 ##### Deploy using helm
 ```
-helm install psql-callisto cetic/postgresql -n callisto
+helm install psql-<namespace> cetic/postgresql -n <namespace>
 ```
 
 ##### Useful commands
