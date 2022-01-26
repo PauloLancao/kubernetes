@@ -9,3 +9,5 @@ databaseChangeLog:
       file: add-name-column.xml
   - include:
       file: add-payload-column.xml
+  - include:
+      file: add-link-column.xml      

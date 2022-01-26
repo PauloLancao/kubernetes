@@ -24,16 +24,20 @@ public class Foo {
     
     @Column()
     private String name;
-
+    
+    @Column()
+    private String link;
+    
     protected Foo() {
     }
 
-    public Foo(long id, String title, String body, String metadata, String name) {
+    public Foo(long id, String title, String body, String metadata, String name, String link) {
         this.id = id;
         this.title = title;
         this.body = body;
         this.metadata = metadata;
         this.name = name;
+        this.link = link;
     }
 
     public Long getId() {
@@ -76,6 +80,14 @@ public class Foo {
 		this.name = name;
 	}
 	
+    public String getLink() {
+		return name;
+	}
+
+	public void setLink(String link) {
+		this.link = link;
+	}
+	
 	@Override
     public int hashCode() {
         final int prime = 31;
@@ -85,6 +97,7 @@ public class Foo {
         result = prime * result + ((title == null) ? 0 : title.hashCode());
         result = prime * result + ((metadata == null) ? 0 : metadata.hashCode());
         result = prime * result + ((name == null) ? 0 : name.hashCode());
+        result = prime * result + ((link == null) ? 0 : link.hashCode());
         return result;
     }
     
@@ -116,6 +129,11 @@ public class Foo {
             if (other.name!= null)
                 return false;
         } else if (!name.equals(other.name))
+            return false;
+        if (link == null) {
+            if (other.link!= null)
+                return false;
+        } else if (!link.equals(other.link))
             return false;
         return true;
     }
