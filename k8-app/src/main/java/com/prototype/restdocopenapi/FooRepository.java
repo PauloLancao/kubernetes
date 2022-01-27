@@ -1,4 +1,4 @@
-package com.callisto.restdocopenapi;
+package com.prototype.restdocopenapi;
 
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.data.repository.PagingAndSortingRepository;

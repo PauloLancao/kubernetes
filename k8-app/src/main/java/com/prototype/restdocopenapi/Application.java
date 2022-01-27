@@ -1,4 +1,4 @@
-package com.callisto.restdocopenapi;
+package com.prototype.restdocopenapi;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;

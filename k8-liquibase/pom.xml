@@ -3,7 +3,6 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.callisto</groupId>
 	<artifactId>timecard-liquibase</artifactId>
 	<version>1.0.21</version>
 	<packaging>jar</packaging>
@@ -12,7 +11,7 @@
 	<description>Spring Boot + Liquibase + JPA</description>
 
     <parent>
-        <groupId>com.callisto</groupId>
+        <groupId>com.prototype</groupId>
         <artifactId>timecard-module</artifactId>
         <version>1.0.0</version>
         <relativePath>../pom.xml</relativePath>

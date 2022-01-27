@@ -1,4 +1,4 @@
-package com.callisto.restdocopenapi.springdoc;
+package com.prototype.restdocopenapi.springdoc;
 
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
 
@@ -20,8 +20,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.callisto.restdocopenapi.Foo;
-import com.callisto.restdocopenapi.FooRepository;
+import com.prototype.restdocopenapi.Foo;
+import com.prototype.restdocopenapi.FooRepository;
 
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;

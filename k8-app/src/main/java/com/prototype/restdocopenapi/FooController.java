@@ -1,4 +1,4 @@
-package com.callisto.restdocopenapi;
+package com.prototype.restdocopenapi;
 
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
 

@@ -1,4 +1,4 @@
-package com.callisto.restdocopenapi;
+package com.prototype.restdocopenapi;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
