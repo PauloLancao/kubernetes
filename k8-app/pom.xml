@@ -80,7 +80,7 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
-					<mainClass>com.callisto.restdocopenapi.Application</mainClass>
+					<mainClass>com.prototype.restdocopenapi.Application</mainClass>
 				</configuration>
 				<executions>
 					<execution>

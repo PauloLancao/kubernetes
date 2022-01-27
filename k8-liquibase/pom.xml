@@ -54,7 +54,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                	<mainClass>com.callisto.Application</mainClass>
+                	<mainClass>com.prototype.Application</mainClass>
             	</configuration>
                 <executions>
                     <execution>
