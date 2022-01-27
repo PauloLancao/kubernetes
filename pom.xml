@@ -34,7 +34,7 @@
 		<snippetsDirectory>${project.build.directory}/generated-snippets</snippetsDirectory>
 
 		<!-- Build & Deploy registry -->
-		<docker.image.prefix>callisto</docker.image.prefix>
+		<docker.image.prefix>timecard</docker.image.prefix>
 		<docker.registry.url>127.0.0.1:32701</docker.registry.url>
 		<helm.chart.version>${project.version}</helm.chart.version>
 		<helm.repo.url>http://localhost:32702/api/charts</helm.repo.url>

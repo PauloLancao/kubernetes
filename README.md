@@ -7,7 +7,7 @@
 * Infrastructure local and minikube
 
 ### Setup
-* docker desktop 
+* docker desktop
 * minikube
 * helm
 * maven
@@ -66,4 +66,29 @@ helm delete <release_name> -n <namespace>
 helm search hub postgresql
 ```
 
-## 
+## Spring boot application + Liquibase Init container
+
+<p>"timecard" is a spring boot project, integrated with Swagger (OpenAPI), exposing a "Foo" Service.</p>
+<p>The project is configured to be released in conjunction with "liquibase-init" project.</p>
+<p>Helm is used as package manager and it's configured to deploy "liquibase-init" image and then the web application.</p>
+<p>There is also a k8 folder which can be used to deploy the web application using kubectl, bare in mind that will depend on how the infrastructure was created.</p>
+<p>Helm files located <b>src->main->helm->application</b></p>
+<p>Kubectl files located <b>src->main->k8</b></p>
+
+<p>Use case</p>
+<p>Add liquibase script to project "liquibase-init"</p>
+<p>Build and push new image to chartmuseum repository, using build.sh <version> script</p>
+<p>Go to "timecard" project under src->main->helm->application values.yaml file and manually update property "liquibaseRepository" with the latest version</p>
+<p>"timecard" project build and push a new image to chartmuseum repository, using build.sh <version> script</p>
+<p>Using helm, install the chart with the following command</p>
+<p>helm install <pod_name> http://localhost:32702/charts/callisto-<version>.tgz -n <namespace></p>
+
+## Liquibase standalone spring application
+
+<p>Example on how to setup a spring boot application with integrated Liquibase.</p>
+<p>Creates a K8 pod with a running process.</p>
+
+## Infrastructure local and minikube
+
+<p>docker-postgres.sh creates a docker running instance, which enables testing the web application locally.</p>
+<p>docker-minikube.sh builds up Kubernetes infrastructure and image repositories.</p>
