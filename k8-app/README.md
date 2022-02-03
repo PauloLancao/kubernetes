@@ -122,4 +122,7 @@ https://gitlab.com/tofik.mikailov/liquibase-init-container/-/blob/main/Dockerfil
 https://artifacthub.io/packages/helm/cetic/postgresql
 https://www.baeldung.com/spring-kafka
 https://www.baeldung.com/jpa-entity-lifecycle-events
+https://medium.com/@jamiekee94/enhancing-spring-boot-actuator-with-custom-endpoints-d6343fbaa1ca
+https://www.javadevjournal.com/spring-boot/spring-boot-actuator-custom-endpoint/
+https://docs.spring.io/spring-boot/docs/current/reference/html/actuator.html
 ```
