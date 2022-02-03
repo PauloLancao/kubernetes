@@ -5,7 +5,7 @@ Running spring-boot application with Liquibase schema manager.
 ## Run local PostgreSQL on docker
 ##### Go to k8-infrastructure and run
 ```
-./docker-postgres.sh <image_name> <port> <db_name> <db_pwd>
+./docker-local-kafka-postgres-deploy.sh
 ```
 
 ##### Run application local

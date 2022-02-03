@@ -13,14 +13,14 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
-@EntityListeners(FooListener.class)
+@EntityListeners(MooListener.class)
 @Entity
 @Getter 
 @Setter 
 @NoArgsConstructor
 @EqualsAndHashCode
 @ToString
-public class Foo {
+public class Moo {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -32,21 +32,33 @@ public class Foo {
     @Column()
     private String body;
 
-    @Column()
-    private String metadata;
-    
-    @Column()
-    private String name;
-    
-    @Column()
-    private String link;
-    
-    public Foo(long id, String title, String body, String metadata, String name, String link) {
+    public Moo(long id, String title, String body) {
         this.id = id;
         this.title = title;
         this.body = body;
-        this.metadata = metadata;
-        this.name = name;
-        this.link = link;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getBody() {
+        return body;
+    }
+
+    public void setBody(String body) {
+        this.body = body;
     }
 }

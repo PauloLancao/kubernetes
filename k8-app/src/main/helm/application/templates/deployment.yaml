@@ -29,7 +29,7 @@ spec:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
       initContainers:
         - name: liquibase-init
-          image: "{{ .Values.image.liquibaseRepository }}"
+          image: "{{ .Values.image.liquibaseRepository }}:{{ .Values.liquibaseVersion }}"
       containers:
         - name: {{ .Chart.Name }}
           securityContext:

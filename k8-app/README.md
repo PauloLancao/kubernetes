@@ -1,17 +1,29 @@
 # Spring Boot & PostgreSQL on Kubernetes
 
-Running spring-boot rest application using swagger UI. 
-Deployment of PostgreSQL and spring-boot application.
+Running spring-boot rest application with swagger UI.
+Integrated with Kafka producers and consumers with JPA event listeners.
 
-## Run local PostgreSQL on docker
+## Check application properties
+```
+Local - application.properties
+K8 - application-dev.properties
+
+K8 exposes DNS names for the following properties,
+spring.datasource.url
+kafka.producer.bootstrapAddress
+kafka.consumer.bootstrapAddress
+
+When running infrastructure script docker-minikube-deploy.sh <namespace>
+an argument is required, which will need to be used on the above properties.
+```
+
+## Run local Kafka and PostgreSQL on docker
 ##### Go to k8-infrastructure and run
 ```
-./docker-postgres.sh <image_name> <port> <db_name> <db_pwd>
+./docker-local-kafka-postgres-deploy.sh
 ```
 
 ##### Run application local
-* PostgreSQL should be running on docker
-
 ```
 mvn clean install
 mvn spring-boot:run
@@ -19,7 +31,7 @@ mvn spring-boot:run
 
 ## Maven Deploy Image to registry
 ```
-./build.sh
+./build.sh <app_version> <liquibase_version>
 ```
 
 ##### Check Image repository
@@ -64,7 +76,9 @@ helm upgrade <pod_name> http://localhost:32702/charts/callisto-<version>.tgz -n 
 
 ## Application Swagger
 ````
-http://localhost:30001/swagger-ui/index.html#/
+Local - http://localhost:8090/swagger-ui/index.html#/
+
+k8 - http://localhost:30001/swagger-ui/index.html#/
 ```
 
 ## PostgreSQL
@@ -91,30 +105,6 @@ SELECT datname FROM pg_database;
 helm delete --purge psql-<namespace>
 ```
 
-##### Deploy from scripts
-###### Navigate to src/main/k8/postgres folder
-
-```
-kubectl apply -f postgres-configmap.yaml -n <namespace>
-kubectl apply -f postgres-storage.yaml -n <namespace>
-kubectl get pvc -n <namespace>
-kubectl apply -f postgres-deployment.yaml -n <namespace>
-kubectl apply -f postgres-service.yaml -n <namespace>
-kubectl get all -n <namespace>
-
-kubectl exec -it [pod-name] --  psql -h localhost -U admin --password -p [port] postgresdb
-```
-
-###### Delete
-```
-kubectl delete -f postgres-configmap.yaml -n <namespace>
-kubectl delete -f postgres-storage.yaml -n <namespace>
-kubectl delete -f postgres-deployment.yaml -n <namespace>
-kubectl delete -f postgres-service.yaml -n <namespace>
-
-kubectl get all -n <namespace>
-```
-
 ## Used resources
 ```
 https://blog.nebrass.fr/playing-with-spring-boot-on-kubernetes/
@@ -130,4 +120,6 @@ https://docs.bitnami.com/kubernetes/faq/troubleshooting/troubleshooting-helm-cha
 https://github.com/cetic/helm-postgresql
 https://gitlab.com/tofik.mikailov/liquibase-init-container/-/blob/main/Dockerfile
 https://artifacthub.io/packages/helm/cetic/postgresql
+https://www.baeldung.com/spring-kafka
+https://www.baeldung.com/jpa-entity-lifecycle-events
 ```

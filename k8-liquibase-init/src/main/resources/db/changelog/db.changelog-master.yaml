@@ -10,4 +10,6 @@ databaseChangeLog:
   - include:
       file: add-payload-column.xml
   - include:
-      file: add-link-column.xml      
+      file: add-link-column.xml
+  - include:
+      file: create-moo-schema.xml   

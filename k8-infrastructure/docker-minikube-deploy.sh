@@ -45,6 +45,7 @@ echo "${yellow}Install registry"
 cd helm/registry
 helm repo add stable https://charts.helm.sh/stable
 helm repo add cetic https://cetic.github.io/helm-charts
+helm repo add bitnami https://charts.bitnami.com/bitnami
 
 echo ""
 echo "${yellow}Update registry"
@@ -63,3 +64,7 @@ echo "http://localhost:32702/api/charts"
 echo ""
 echo "${yellow}Install PostgreSQL"
 helm install psql-$1 cetic/postgresql -n $1
+
+echo ""
+echo "${yellow}Install Kafka"
+helm install kafka-$1 bitnami/kafka -n $1

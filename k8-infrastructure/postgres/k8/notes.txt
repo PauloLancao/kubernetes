@@ -1,0 +1,21 @@
+Found tricky to login to the database consistently which made me took a different path of choosing another PostgreSQL image using helm.
+
+Start the service running the following commands,
+
+1º kubectl create -f postgres-configmap.yaml -n <namespace>
+2º kubectl create -f postgres-storage.yaml -n <namespace>
+3º kubectl create -f postgres-deployment.yaml -n <namespace>
+4º kubectl create -f postgres-service.yaml -n <namespace>
+
+Connect to PostgreSQL
+
+1º kubectl get svc postgres -n <namespace>
+2º psql -h localhost -U postgresadmin1 --password -p 31070 postgresdb
+
+Delete resources
+
+1º kubectl delete service postgres -n <namespace>
+2º kubectl delete deployment postgres -n <namespace>
+3º kubectl delete configmap postgres-config -n <namespace>
+4º kubectl delete persistentvolumeclaim postgres-pv-claim -n <namespace>
+5º kubectl delete persistentvolume postgres-pv-volume -n <namespace>

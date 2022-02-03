@@ -7,3 +7,7 @@ databaseChangeLog:
       file: db/changelog/add-foo-column.xml
   - include:
       file: db/changelog/add-name-column.xml
+  - include:
+      file: db/changelog/create-moo-schema.xml
+  - include:
+      file: db/changelog/add-link-column.xml

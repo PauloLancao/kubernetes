@@ -1,0 +1,12 @@
+Start Kafka Docker
+
+1º docker-compose up -d
+
+Check connections
+
+1º nc -z localhost 22181
+2º nc -z localhost 29092
+
+Links
+
+1º https://www.baeldung.com/ops/kafka-docker-setup

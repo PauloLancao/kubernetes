@@ -27,6 +27,7 @@
 		<spring.restdocs.version>2.0.6.RELEASE</spring.restdocs.version>
 		<liquibase.core.version>4.7.0</liquibase.core.version>
 		<lombok.version>1.18.22</lombok.version>
+		<spring.kafka.version>2.8.2</spring.kafka.version>
 
 		<!-- Swagger OpenAPI -->
 		<springdoc.version>1.6.4</springdoc.version>
@@ -103,6 +104,13 @@
 				<artifactId>lombok</artifactId>
 				<version>${lombok.version}</version>
 				<optional>true</optional>
+			</dependency>
+
+			<!-- Kafka -->
+			<dependency>
+			    <groupId>org.springframework.kafka</groupId>
+			    <artifactId>spring-kafka</artifactId>
+			    <version>${spring.kafka.version}</version>
 			</dependency>
 
 			<!-- SpringDoc -->
